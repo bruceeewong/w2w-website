@@ -61,7 +61,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       },
     },
     waterMarkProps: {
-      content: initialState?.currentUser?.name,
+      content: '',
     },
     footerRender: () => <Footer />,
     onPageChange: () => {
@@ -108,7 +108,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       return (
         <>
           {children}
-          {isDev &&
+          {isDev && (
             <SettingDrawer
               disableUrlParams
               enableDarkTheme
@@ -120,7 +120,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
                 }));
               }}
             />
-          }
+          )}
         </>
       );
     },
